@@ -16,13 +16,12 @@
     </div>
 
     <div th:if="${books != null}">
-        <h1>Different Genre</h1>
+        <h1>All Genre</h1>
         <ul>
             <li th:each="b : ${books}">
                 <span th:text="${b}"></span>
             </li>
         </ul>
     </div>
-
 </body>
 </html>
