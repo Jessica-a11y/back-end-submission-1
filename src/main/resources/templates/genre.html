@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:if="${genre != null}">
+        <h1 th:text="${genre[0].getGenre()}"></h1>
+        <ul>
+            <li th:each="g : ${genre}">
+                <span th:text="${g.title}"></span> -
+                <span th:text="${g.author}"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div th:if="${books != null}">
+        <h1>Different Genre</h1>
+        <ul>
+            <li th:each="b : ${books}">
+                <span th:text="${b}"></span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
