@@ -35,6 +35,11 @@ public class BookController {
         return new ModelAndView("booklist", "books", books);
     }
 
+    /**
+     * Shows a genre or a list of genre.
+     * @param type, a genre
+     * @return either a sorted list of genre or a list of books for a cerain genre.
+     */
     @GetMapping("/genre")
     public ModelAndView showGenre(@RequestParam(required = false) String type) {
         List<Book> sortedBooks = new ArrayList<>();
