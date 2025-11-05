@@ -15,11 +15,13 @@
         </ul>
     </div>
 
-    <div th:if="${books != null}">
+    <div th:if="${allGenre != null}">
         <h1>All Genre</h1>
         <ul>
-            <li th:each="b : ${books}">
-                <span th:text="${b}"></span>
+            <li th:each="ag : ${allGenre}">
+                <a th:href="@{/genre(type=${ag})}">
+                    <span th:text="${ag}"></span>
+                </a>
             </li>
         </ul>
     </div>

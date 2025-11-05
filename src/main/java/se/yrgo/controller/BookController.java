@@ -2,7 +2,6 @@ package se.yrgo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import se.yrgo.domain.Book;
@@ -51,7 +50,7 @@ public class BookController {
             for(Book b : books) {
                 setGenre.add(b.getGenre());
             }
-            return new ModelAndView("genre", "books", setGenre);
+            return new ModelAndView("genre", "allGenre", setGenre);
         }
     }
 }
